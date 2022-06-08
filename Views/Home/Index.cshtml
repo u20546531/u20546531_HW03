@@ -1,0 +1,95 @@
+﻿<style>
+    .flex-container {
+        display: flex;
+    }
+
+    .flex-child {
+        flex: 1;
+      
+    }
+
+        .flex-child:first-child {
+            margin-right: 20px;
+        } 
+</style>
+<div>
+    <h1>Media Central!</h1>
+    <h3>The media platform you never knew you needed! Here's what it's about... </h3>
+    <div style="background-color:lightgray">
+        <div class="flex-container">
+
+
+            <div class="flex-child magenta">
+                <div style="margin-left:5%">
+                    <h3>Description</h3>
+                    <p>
+                        This is a platform meant for you! Here, via Media Central, you will be able to upload documents, images and videos from y your computer and submit the selected item.
+
+                    </p>
+                    <p>
+                        Under the Files tab, you are able to view all the files you have uploaded with the ability to download any of them being a click away! You can also delete any file that you don't require here anymore and that can all be done with one click!
+                    </p>
+                    <p>
+                        To view the images that you have uploaded, you simply click on the Images tab and you will see the images you have uploaded in order as well as the options to delete the uploaded image or download the image onto your device. And by now, you should get a jist of it because on the Videos page, you will be able to view and play all the videos you have uploaded and also delete a video or download it onto your device.
+                    </p>
+                    <p>
+                        And if you would like to know more about me, when you click on the About Me page, there will be my biography along with stunning picture of me to match a face to the name!
+                    </p>)
+                </div>
+            </div>
+
+            <div class="flex-child green">
+                <h3>Option Selection</h3>
+                <br />
+                <table style="width:100%">
+                    <tr>
+                        <td rowspan="2">
+                            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+
+                                <div>
+                                    <table style="text-align:left">
+                                        <tr>
+                                            <td><label for="paras">Document</label></td>
+                                            <td style="width:20px"><input type="radio" name="ch" value="doc" id="paras" checked="checked" /></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><label for="words">Image</label></td>
+                                            <td style="width:20px"><input type="radio" name="ch" value="img" id="words" /></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><label for="bytes">Video</label></td>
+                                            <td style="width:20px"><input type="radio" name="ch" value="vid" id="bytes" /></td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td style="width:20px"><input type="file" name="file" id="generate" value="Browse..." /></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><label for="lists"></label></td>
+                                        </tr>
+                                        <tr>
+
+                                            <td style="width:20px"><input type="submit" name="submit" id="Submit" value="Submit" /></td>
+
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            }
+                        </td>
+
+                    </tr>
+
+                </table>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
